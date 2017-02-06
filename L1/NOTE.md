@@ -1,14 +1,14 @@
 本课总结
-1.其中`name`、`version`和`manifest_version`三个字段是必选的，
+* 其中`name`、`version`和`manifest_version`三个字段是必选的，
 另外在当前版本下`manifest_version`的值推荐为2，版本1已经被弃用。
-2.`icons`为扩展的图标，需要提供三种不同尺寸的图标：16*16的图标
+* `icons`为扩展的图标，需要提供三种不同尺寸的图标：16*16的图标
 用于扩展的favicon，在查看扩展的option页面时可以看到；48*48的图
 标在扩展的管理页面可以看到；128*128的图标用于WebApp。
-3.图标建议都使用png格式，因为png对透明的支持最好。要注意的是：
+* 图标建议都使用png格式，因为png对透明的支持最好。要注意的是：
 `icons`里的图标和`browser_action`或`page_action`里的
 `default_icon`可是不一样的，`default_icon`显示在工具栏
 或URL输入栏右侧，需要两个规格 19*19 38*38
-4.js文件要放在文件夹里，否则出不来效果（目前不知道原因是什么？？）
+* js文件要放在文件夹里，否则出不来效果（目前不知道原因是什么？？）
 ```
 {
     "manifest_version": 2,
