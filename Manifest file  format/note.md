@@ -29,3 +29,13 @@
 ```
 
 - [x] Google的官方文档中对于扩展和应用给出了两个不同的Manifest介绍界面，这是因为有些属性只能由扩展使用，而有些属性只能由应用使用。
+- [x] Chrome扩展的Manifest必须包含`name`、`version`和`manifest_version`属性，目前来说manifest_version属性值只能为数字2，对于
+应用来说，还必须包含`app`属性。
+
+其他常用的可选属性还有`browser_action`、`page_action`、`background`、`permissions`、`options_page`、`content_scripts`，所以
+我们可以保留一份`manifest.json`模板，当编写新的扩展时直接填入相应的属性值。如果我们需要的属性不在这个模板中，可以再去查阅官方文档，
+但这样的一份模板可以应对大部分的扩展了。
+
+在官方文档中可以找到完整的Manifest属性列表，
+扩展在https://developer.chrome.com/extensions/manifest，
+应用在https://developer.chrome.com/apps/manifest。
