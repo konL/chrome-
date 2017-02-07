@@ -6,14 +6,17 @@
 中的一种，也就是说JSON有嵌套的性质，值也可以是JSON格式的数据。
 ```
 [Object]
+
 {
     "name" : "Harry Potter",
     "author" : {
         "name" : "J.K.Rowling",
         "birth" : 1964
     },
+
 [array]
-    "books" : [
+   
+   "books" : [
         "Harry Potter and the Philosopher's Stone",
         "Harry Potter and the Chamber of Secrets",
         "Harry Potter and the Prisoner of Azkaban",
@@ -24,3 +27,5 @@
     ]
 }
 ```
+
+- [x] Google的官方文档中对于扩展和应用给出了两个不同的Manifest介绍界面，这是因为有些属性只能由扩展使用，而有些属性只能由应用使用。
