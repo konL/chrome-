@@ -11,9 +11,12 @@
 全称Universal Cross-Site Scripting，翻译过来就是通用型XSS，也叫Universal XSS。
 那么，UXSS由于前面提到的几种XSS有什么区别？
 不同于常见的XSS，UXSS是一种利用浏览器或者浏览器扩展漏洞来制造产生XSS的条件并执行代码的一种攻击类型。
+
 ### Privilege escalation.
-特权上升(EoP)，是一种被 黑客 使用来获得对一个系统或 网络 控制的方法。远程用户首先利用某个网络程序的漏洞（通过html）获 privileg escal 利用得对计算机的普通用户访问权限，然后基于这种访问权限攻击。
+>特权上升(EoP)，是一种被 黑客 使用来获得对一个系统或 网络 控制的方法。远程用户首先利用某个网络程序的漏洞（通过html）获 privileg escal 利用得对计算机的普通用户访问权限，然后基于这种访问权限攻击。
+
 ### Privacy violations (e.g. referrer leaking).(泄露信息）
+
 ###跨域
 http://a.example.com/a.txt 
 * http协议
