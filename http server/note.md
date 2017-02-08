@@ -2,8 +2,8 @@
 对于网站来说，浏览器出于安全考虑是不允许跨域。
 另外，对于`域`相同，但`端口或协议不同`时，浏览器也是`禁止`的。下表给出了进一步的说明：
 
- Tables        | Are           | Cool  |
+ URL       |DESCRIPTION           | 是否允许  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
+|http://a.example.com/ & http://a.example.com/a.txt      |同域|允许|
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
