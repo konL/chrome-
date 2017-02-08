@@ -2,7 +2,9 @@
 
 * 文中的网站已经不可用，我这里给一个。我得到的responseText是整个网页，后面得用innerHTML出来结果才正确。是不是asp和php得到的responseText就不一样？另外用innerHTML有什么问题或者有没有办法提取得到的Text中的内容？ 
 * 关于使用innerHTML为何不安全？原回答：http://stackoverflow.com/questions/41421122/chrome-extension-content-script-and-xss-attacks/41445835#41445835
+
 ### Same origin bypasses (including universal XSS, aka UXSS).
+
 >**xss 编辑**
 跨站脚本攻击(Cross Site Scripting)，为不和层叠样式表(Cascading Style Sheets, CSS)的缩写混淆，故将跨站脚本攻击缩写为XSS。恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。
 **UXSS**
