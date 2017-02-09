@@ -22,6 +22,7 @@ setInterval(function(){
 	httpRequest('http://www.google.cn/',function(status){
 		chrome.browserAction.setIcon({
 			path:'images/'+(status?'oline.png':'offline.png')//true或false
+			setTimeout(checkStatus, 5000);
 		});
 	})
 },5000);
