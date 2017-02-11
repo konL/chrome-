@@ -39,3 +39,48 @@ HTML5新增的方法，它允许JavaScript在用户计算机硬盘上永久储�
     ]
 }
 ```
+option.html
+```确定用户是否填写北京
+var city = localStorage.city || 'beijing';
+document.getElementById('city').value = city;
+//写点击save事件
+document.getElementById('save').onclick = function(){
+    localStorage.city = document.getElementById('city').value;
+    alert('保存成功。');
+}
+```
+weather.js
+```
+//发送请求，之后调用callback函数）
+function httpRequest(url, callback){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            callback(xhr.responseText);
+        }
+    }
+    xhr.send();
+}//该函数显示xhr。response
+function showWeather(result){/
+    //解析
+    result = JSON.parse(result);
+    var list = result.list;
+    var table = '<table><tr><th>日期</th><th>天气</th><th>最低温度</th><th>最高温度</th></tr>';
+    for(var i in list){
+        var d = new Date(list[i].dt*1000);
+        table += '<tr>';
+        table += '<td>'+d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()+'</td>';
+        table += '<td>'+list[i].weather[0].description+'</td>';
+        table += '<td>'+Math.round(list[i].temp.min-273.15)+' °C</td>';
+        table += '<td>'+Math.round(list[i].temp.max-273.15)+' °C</td>';
+        table += '</tr>';
+    }
+    table += '</table>';
+    document.getElementById('weather').innerHTML = table;
+}
+//确定
+var city = localStorage.city;
+city = city?city:'beijing';
+var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q='+city+',china&lang=zh_cn';
+httpRequest(url, showWeather);
