@@ -33,6 +33,7 @@ runtime.onMessage完整的方法为：
 即消息内容、消息发送者相关信息和相应函数。*/
 - [x] use for the communication of google translate and the extension
 - [x] and update the data
+
 >chrome.runtime.onMessage.addListener(function(message,sender,sendResponse){
 	
 update方法可以动态更改菜单属性，指定需要更改菜单的id和所需要更改的属性即可
