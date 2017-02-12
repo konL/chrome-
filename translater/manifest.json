@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Baidu Translate",
+    "version": "1.0",
+    "description": "Translate what you select with Baidu",
+    //background program
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ]
+    },
+    "icons": {
+        "16": "images/icon16.png"
+    },
+    //content scripts是page action将注入到特定页面中的脚本
+    //匹配maches的url执行脚本
+
+    
+    "permissions": [
+        "contextMenus"
+    ]
+}
